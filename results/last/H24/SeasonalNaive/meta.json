@@ -1,0 +1,74 @@
+{
+  "model": "SeasonalNaive",
+  "name": "Seasonal naive (smallest whole-week lag >= lead)",
+  "kind": "naive",
+  "family": "naive",
+  "seeds": [
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "fallback_hours": {
+    "val": 0,
+    "test": 0
+  },
+  "total_time_s": 0.0004029273986816406,
+  "fold": "last",
+  "setting": "H24",
+  "horizon": "24",
+  "long_feats": false,
+  "holiday_fix": true,
+  "n_seq_base": 65,
+  "n_seq_station": 119,
+  "n_known": 75,
+  "mase_scale": 526.0050276246857,
+  "y_scale": 0.09236171841621399,
+  "train": [
+    "2015-12-03 12:00:00",
+    "2024-03-10 21:00:00",
+    70694
+  ],
+  "val": [
+    "2024-03-10 22:00:00",
+    "2025-03-10 21:00:00"
+  ],
+  "test": [
+    "2025-03-10 22:00:00",
+    "2026-03-10 21:00:00"
+  ],
+  "outage_train_excluded": 443,
+  "config": {
+    "horizon": 24,
+    "long_feats": "auto",
+    "seq_len": 168,
+    "val_days": 365,
+    "test_days": 365,
+    "test_end": null,
+    "seeds": [
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "max_epochs": 100,
+    "patience": 12,
+    "epoch_frac": 0.1,
+    "input_noise": 0.05,
+    "batch_size": 256,
+    "holiday_fix": true,
+    "eid_break": [
+      -3,
+      4
+    ],
+    "exclude_outage_train": true,
+    "outage_ratio": 0.6,
+    "issue_hour": 10,
+    "out_root": "/kaggle/working/results",
+    "run_audit": true,
+    "n_boot": 1000,
+    "smoke": false
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "model": "XGBoost",
+  "name": "XGBoost (same features, tabular)",
+  "kind": "gbm",
+  "family": "baseline",
+  "seeds": [
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "per_seed": [
+    {
+      "best_iteration": 197,
+      "seed": 43
+    },
+    {
+      "best_iteration": 141,
+      "seed": 44
+    },
+    {
+      "best_iteration": 189,
+      "seed": 45
+    },
+    {
+      "best_iteration": 151,
+      "seed": 46
+    },
+    {
+      "best_iteration": 141,
+      "seed": 47
+    }
+  ],
+  "total_time_s": 82.09991955757141,
+  "fold": "end20240310",
+  "setting": "H720",
+  "horizon": "720",
+  "long_feats": true,
+  "holiday_fix": true,
+  "n_seq_base": 68,
+  "n_seq_station": 122,
+  "n_known": 75,
+  "mase_scale": 500.8800597035946,
+  "y_scale": 0.17781414091587067,
+  "train": [
+    "2016-02-02 12:00:00",
+    "2022-03-11 21:00:00",
+    50370
+  ],
+  "val": [
+    "2022-03-11 22:00:00",
+    "2023-03-11 21:00:00"
+  ],
+  "test": [
+    "2023-03-11 22:00:00",
+    "2024-03-10 21:00:00"
+  ],
+  "outage_train_excluded": 319,
+  "config": {
+    "horizon": 720,
+    "long_feats": "auto",
+    "seq_len": 168,
+    "val_days": 365,
+    "test_days": 365,
+    "test_end": "2024-03-10 21:00",
+    "seeds": [
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "max_epochs": 100,
+    "patience": 12,
+    "epoch_frac": 0.1,
+    "input_noise": 0.05,
+    "batch_size": 256,
+    "holiday_fix": true,
+    "eid_break": [
+      -3,
+      4
+    ],
+    "exclude_outage_train": true,
+    "outage_ratio": 0.6,
+    "issue_hour": 10,
+    "out_root": "/kaggle/working/results",
+    "run_audit": true,
+    "n_boot": 1000,
+    "smoke": false
+  }
+}

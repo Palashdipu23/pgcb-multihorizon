@@ -1,0 +1,75 @@
+{
+  "model": "Ridge",
+  "name": "Ridge regression (same features, tabular)",
+  "kind": "gbm",
+  "family": "baseline",
+  "seeds": [
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "per_seed": [
+    {
+      "seed": 43
+    }
+  ],
+  "total_time_s": 13.36550784111023,
+  "fold": "end20250310",
+  "setting": "HDA",
+  "horizon": "DA",
+  "long_feats": false,
+  "holiday_fix": true,
+  "n_seq_base": 65,
+  "n_seq_station": 119,
+  "n_known": 75,
+  "mase_scale": 508.5401000074002,
+  "y_scale": 0.1554383933544159,
+  "train": [
+    "2015-12-04 00:00:00",
+    "2023-03-10 23:00:00",
+    61870
+  ],
+  "val": [
+    "2023-03-11 00:00:00",
+    "2024-03-09 23:00:00"
+  ],
+  "test": [
+    "2024-03-10 00:00:00",
+    "2025-03-09 23:00:00"
+  ],
+  "outage_train_excluded": 473,
+  "config": {
+    "horizon": "DA",
+    "long_feats": "auto",
+    "seq_len": 168,
+    "val_days": 365,
+    "test_days": 365,
+    "test_end": "2025-03-10 21:00",
+    "seeds": [
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "max_epochs": 100,
+    "patience": 12,
+    "epoch_frac": 0.1,
+    "input_noise": 0.05,
+    "batch_size": 256,
+    "holiday_fix": true,
+    "eid_break": [
+      -3,
+      4
+    ],
+    "exclude_outage_train": true,
+    "outage_ratio": 0.6,
+    "issue_hour": 10,
+    "out_root": "/kaggle/working/results",
+    "run_audit": true,
+    "n_boot": 1000,
+    "smoke": false
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "model": "LightGBM",
+  "name": "LightGBM (same features, tabular)",
+  "kind": "gbm",
+  "family": "baseline",
+  "seeds": [
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "per_seed": [
+    {
+      "best_iteration": 92,
+      "seed": 43
+    },
+    {
+      "best_iteration": 83,
+      "seed": 44
+    },
+    {
+      "best_iteration": 104,
+      "seed": 45
+    },
+    {
+      "best_iteration": 76,
+      "seed": 46
+    },
+    {
+      "best_iteration": 84,
+      "seed": 47
+    }
+  ],
+  "total_time_s": 91.39868688583374,
+  "fold": "end20240310",
+  "setting": "H24_wlag72",
+  "horizon": "24",
+  "long_feats": false,
+  "holiday_fix": true,
+  "n_seq_base": 65,
+  "n_seq_station": 119,
+  "n_known": 75,
+  "mase_scale": 498.39526291197404,
+  "y_scale": 0.0946277379989624,
+  "train": [
+    "2015-12-03 12:00:00",
+    "2022-03-11 21:00:00",
+    53278
+  ],
+  "val": [
+    "2022-03-11 22:00:00",
+    "2023-03-11 21:00:00"
+  ],
+  "test": [
+    "2023-03-11 22:00:00",
+    "2024-03-10 21:00:00"
+  ],
+  "outage_train_excluded": 339,
+  "config": {
+    "horizon": 24,
+    "long_feats": "auto",
+    "seq_len": 168,
+    "val_days": 365,
+    "test_days": 365,
+    "test_end": "2024-03-10 21:00",
+    "seeds": [
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "max_epochs": 100,
+    "patience": 12,
+    "epoch_frac": 0.1,
+    "input_noise": 0.05,
+    "batch_size": 256,
+    "holiday_fix": true,
+    "eid_break": [
+      -3,
+      4
+    ],
+    "exclude_outage_train": true,
+    "outage_ratio": 0.6,
+    "issue_hour": 10,
+    "weather_lag": 72,
+    "out_root": "/kaggle/working/pgcb-multihorizon/results",
+    "run_audit": true,
+    "n_boot": 1000,
+    "smoke": false
+  }
+}

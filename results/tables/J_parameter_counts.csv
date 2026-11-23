@@ -1,0 +1,16 @@
+model,name,H168,H24,H720,HDA
+DLinear,DLinear + linear known features,0.0,0.0,0.0,0.0
+K-MLP,MLP on known features only (no history window),0.026,0.026,0.026,0.026
+M1,CNN+LSTM,0.357,0.357,0.359,0.357
+M2,CNN+BiLSTM,0.291,0.292,0.294,0.292
+M2+S,CNN+BiLSTM + 56 station channels,0.326,0.326,0.328,0.326
+M3,CNN+Transformer,0.41,0.41,0.412,0.41
+M4,CNN+Patch-Transformer (PatchTST-style),0.491,0.492,0.493,0.492
+M5,CNN+BiGRU+Transformer,0.526,0.527,0.529,0.527
+M5+S,CNN+BiGRU+Transformer + 56 station channels,0.561,0.561,0.563,0.561
+M6,CNN+BiGRU||BiLSTM,0.465,0.466,0.468,0.466
+M7,CNN+SWE+BiGRU+LB-Transformer,0.572,0.572,0.574,0.572
+M7-MLP,M7 with station MLP instead of GCN,0.573,0.573,0.575,0.573
+M7-noLB,M7 without locality bias,0.572,0.572,0.574,0.572
+M7-noStation,M7 without station branch (65 inputs),0.526,0.527,0.529,0.527
+M8,CNN+BiLSTM+Transformer,0.568,0.568,0.57,0.568

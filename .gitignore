@@ -1,0 +1,19 @@
+# data (PGCB demand is not redistributed; see data/README.md)
+data/*.csv
+!data/stations.csv
+data/weather/raw/
+
+# outputs: results/ is committed with the paper; model weights and smoke runs are not
+results_*/
+*.pt
+*.pkl
+history_seed*.json
+
+# python / notebooks
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+.DS_Store

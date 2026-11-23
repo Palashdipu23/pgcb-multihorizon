@@ -1,0 +1,140 @@
+{
+  "model": "M3",
+  "name": "CNN+Transformer",
+  "kind": "nn",
+  "family": "main",
+  "seeds": [
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "hp": {
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "cnn_filters": 64,
+    "cnn_dropout": 0.3,
+    "d_model": 128,
+    "rnn_layers": 2,
+    "rnn_dropout": 0.3,
+    "head_hidden": 128,
+    "head_dropout": 0.4,
+    "known_dim": 64,
+    "n_heads": 4,
+    "n_layers": 2,
+    "ff_dim": 256,
+    "tf_dropout": 0.2,
+    "gnn_hid": 16,
+    "gnn_out": 32,
+    "lb_band": 24,
+    "lb_tau": 6.0,
+    "lb_alpha": 0.5,
+    "patch_len": 12,
+    "patch_stride": 6,
+    "input_noise": 0.05
+  },
+  "per_seed": [
+    {
+      "best_epoch": 21,
+      "best_val_loss": 0.33048924803733826,
+      "n_params": 410497,
+      "train_time_s": 54.584372997283936,
+      "infer_ms": 0.10184754519702093,
+      "seed": 43
+    },
+    {
+      "best_epoch": 15,
+      "best_val_loss": 0.3302397131919861,
+      "n_params": 410497,
+      "train_time_s": 44.75723671913147,
+      "infer_ms": 0.10170884872680386,
+      "seed": 44
+    },
+    {
+      "best_epoch": 16,
+      "best_val_loss": 0.32563915848731995,
+      "n_params": 410497,
+      "train_time_s": 46.32285928726196,
+      "infer_ms": 0.1019493902110618,
+      "seed": 45
+    },
+    {
+      "best_epoch": 25,
+      "best_val_loss": 0.33292779326438904,
+      "n_params": 410497,
+      "train_time_s": 61.003058433532715,
+      "infer_ms": 0.1012139396580387,
+      "seed": 46
+    },
+    {
+      "best_epoch": 12,
+      "best_val_loss": 0.33397477865219116,
+      "n_params": 410497,
+      "train_time_s": 39.45195150375366,
+      "infer_ms": 0.1009205977121989,
+      "seed": 47
+    }
+  ],
+  "n_params": 410497,
+  "mean_best_epoch": 17.8,
+  "mean_train_time_s": 49.22389578819275,
+  "total_time_s": 250.85847234725952,
+  "fold": "last",
+  "setting": "H24_wlag72",
+  "horizon": "24",
+  "long_feats": false,
+  "holiday_fix": true,
+  "n_seq_base": 65,
+  "n_seq_station": 119,
+  "n_known": 75,
+  "mase_scale": 526.0050276246857,
+  "y_scale": 0.09236171841621399,
+  "train": [
+    "2015-12-03 12:00:00",
+    "2024-03-10 21:00:00",
+    70694
+  ],
+  "val": [
+    "2024-03-10 22:00:00",
+    "2025-03-10 21:00:00"
+  ],
+  "test": [
+    "2025-03-10 22:00:00",
+    "2026-03-10 21:00:00"
+  ],
+  "outage_train_excluded": 443,
+  "config": {
+    "horizon": 24,
+    "long_feats": "auto",
+    "seq_len": 168,
+    "val_days": 365,
+    "test_days": 365,
+    "test_end": null,
+    "seeds": [
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "max_epochs": 100,
+    "patience": 12,
+    "epoch_frac": 0.1,
+    "input_noise": 0.05,
+    "batch_size": 256,
+    "holiday_fix": true,
+    "eid_break": [
+      -3,
+      4
+    ],
+    "exclude_outage_train": true,
+    "outage_ratio": 0.6,
+    "issue_hour": 10,
+    "weather_lag": 72,
+    "out_root": "/kaggle/working/pgcb-multihorizon/results",
+    "run_audit": true,
+    "n_boot": 1000,
+    "smoke": false
+  }
+}

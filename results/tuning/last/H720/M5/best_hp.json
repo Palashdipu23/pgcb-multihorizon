@@ -1,0 +1,9 @@
+{
+  "lr": 0.001,
+  "weight_decay": 0.001,
+  "head_dropout": 0.4,
+  "d_model": 128,
+  "input_noise": 0.05,
+  "rnn_dropout": 0.2,
+  "tf_dropout": 0.2
+}

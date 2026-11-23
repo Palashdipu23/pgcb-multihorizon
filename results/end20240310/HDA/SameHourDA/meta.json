@@ -1,0 +1,75 @@
+{
+  "model": "SameHourDA",
+  "name": "Same hour on the latest observed day (D-1 if hour <= issue hour, else D-2)",
+  "kind": "naive",
+  "family": "naive",
+  "seeds": [
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "fallback_hours": {
+    "val": 0,
+    "test": 0
+  },
+  "total_time_s": 0.005154132843017578,
+  "fold": "end20240310",
+  "setting": "HDA",
+  "horizon": "DA",
+  "long_feats": false,
+  "holiday_fix": true,
+  "n_seq_base": 65,
+  "n_seq_station": 119,
+  "n_known": 75,
+  "mase_scale": 498.20475679808476,
+  "y_scale": 0.15876416862010956,
+  "train": [
+    "2015-12-04 00:00:00",
+    "2022-03-10 23:00:00",
+    53247
+  ],
+  "val": [
+    "2022-03-11 00:00:00",
+    "2023-03-10 23:00:00"
+  ],
+  "test": [
+    "2023-03-11 00:00:00",
+    "2024-03-09 23:00:00"
+  ],
+  "outage_train_excluded": 336,
+  "config": {
+    "horizon": "DA",
+    "long_feats": "auto",
+    "seq_len": 168,
+    "val_days": 365,
+    "test_days": 365,
+    "test_end": "2024-03-10 21:00",
+    "seeds": [
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "max_epochs": 100,
+    "patience": 12,
+    "epoch_frac": 0.1,
+    "input_noise": 0.05,
+    "batch_size": 256,
+    "holiday_fix": true,
+    "eid_break": [
+      -3,
+      4
+    ],
+    "exclude_outage_train": true,
+    "outage_ratio": 0.6,
+    "issue_hour": 10,
+    "weather_lag": 0,
+    "out_root": "/kaggle/working/pgcb-multihorizon/results",
+    "run_audit": true,
+    "n_boot": 1000,
+    "smoke": false
+  }
+}

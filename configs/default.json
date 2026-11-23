@@ -1,0 +1,17 @@
+{
+  "_comment": "Frozen protocol for every experiment in the paper. Same split, preprocessing and seeds for all models.",
+  "horizons": [24, 168, 720, "DA"],
+  "seeds": [43, 44, 45, 46, 47],
+  "folds": {
+    "2025-26": null,
+    "2024-25": "2025-03-10 21:00",
+    "2023-24": "2024-03-10 21:00"
+  },
+  "main_fold": "2025-26",
+  "out_root": "results",
+  "extra_holidays_csv": null,
+  "load_shedding_csv": null,
+  "ablation_horizons": [24, 720],
+  "long_lag_switch": [[168, true], [720, false]],
+  "tuning_trials": 8
+}
